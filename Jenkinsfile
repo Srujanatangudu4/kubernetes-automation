@@ -10,14 +10,14 @@ pipeline{
         }
         stage('Docker Login'){
             steps{
-                bat 'docker login -u Srujanatangudu4 -p Srujana@2004'
+                bat 'docker login -u srujanatangudu4 -p Srujana@2004'
             }
         }
         stage('push Docker Image to Docker Hub'){
             steps{
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag kubedemoapp:v1 Srujanatangudu4/sample:kubeimage1"
-                bat "docker push Srujanatangudu4/sample:kubeimage1"
+                bat "docker tag kubedemoapp:v1 srujanatangudu4/sample:kubeimage1"
+                bat "docker push srujanatangudu4/sample:kubeimage1"
             }
         }
         steps('Deploy to Kubernetes'){
